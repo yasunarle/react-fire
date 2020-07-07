@@ -1,4 +1,5 @@
-# React × firebase 🔥 チュートリアル To Do List を作りながら React を学ぶ
+# React × firebase 🔥 
+##チュートリアル To Do List を作りながら React を学ぶ
 
 ## React hooks ⏯️
 
