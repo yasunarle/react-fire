@@ -26,10 +26,15 @@ function Greeting(props) {
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Counter />
       <Welcome name="Sara" />
       <Greeting isLoggedIn={false} />
+
+      <input />
+      <button>Add Todo</button>
+
+      <ul></ul>
     </div>
   )
 }
