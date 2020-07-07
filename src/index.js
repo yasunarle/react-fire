@@ -39,7 +39,12 @@ function App() {
     db.collection("todos")
       .orderBy("created_at", "desc")
       .onSnapshot((snapshot) => {
-        setTodos(snapshot.docs.map((doc) => doc.data().todo))
+        setTodos(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            todo: doc.data().todo,
+          }))
+        )
       })
   }, [])
 
@@ -79,7 +84,7 @@ function App() {
       </form>
       <ul>
         {todos.map((todo) => (
-          <Todo text={todo} />
+          <Todo todo={todo} key={todo.id} />
         ))}
       </ul>
     </div>
